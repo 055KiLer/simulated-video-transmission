@@ -84,7 +84,10 @@ tools/stress_test.ps1 -PortName COM10 -Baud 115200
 `Get-WmiObject -Class Win32_PnPEntity | Select Name` 查自己实际端口，别照抄。
 
 ```bash
-# 分析串口助手存下来的原始抓包：按协议帧同步 + CRC8/CRC16 校验，输出命令码直方图
+# 先把口上的原始字节抓成文件（默认 921600，只读不发）
+tools/capture.ps1 -PortName COM3 -Baud 115200 -Seconds 30 -OutFile capture.bin
+
+# 再按协议帧同步 + CRC8/CRC16 校验，输出命令码直方图
 python tools/parse_capture.py capture.bin -v
 ```
 

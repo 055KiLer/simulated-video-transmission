@@ -30,3 +30,10 @@ __pycache__/
 *.log
 *.tmp
 .*.swp
+
+# ---- Keil 命令行编译/烧录的输出 ----
+build_log.txt
+flash_log.txt
+
+# ---- 抓包脚本的落盘数据，原始字节属于现场测试产物 ----
+capture.bin
