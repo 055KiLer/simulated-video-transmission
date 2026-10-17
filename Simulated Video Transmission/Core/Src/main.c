@@ -122,13 +122,13 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        if (huart1.Rxstate != HAL_UART_STATE_BUSY_RX) {
+        if (huart1.RxState != HAL_UART_STATE_BUSY_RX) {
             __HAL_UART_CLEAR_OREFLAG(&huart1);
             rx1_rpos = 0;
             rx1_wpos = 0;
             HAL_UART_Receive_DMA(&huart1, rx1_buffer, Rx1_Buffer_Size);
         }
-        if (huart2.Rxstate != HAL_UART_STATE_BUSY_RX) {
+        if (huart2.RxState != HAL_UART_STATE_BUSY_RX) {
             __HAL_UART_CLEAR_OREFLAG(&huart2);
             rx2_rpos = 0;
             rx2_wpos = 0;
