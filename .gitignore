@@ -1,0 +1,32 @@
+# ---- EIDE 自动拉取的 CMSIS 设备包（4.7MB，编译时会自动重新生成）----
+Simulated Video Transmission/MDK-ARM/.cmsis/
+
+# ---- Keil 与 EIDE 的编译输出目录 ----
+Simulated Video Transmission/MDK-ARM/build/
+Simulated Video Transmission/MDK-ARM/Simulated Video Transmission/
+
+# ---- Keil 调试配置：内容跟本机调试器、串口号绑定，换机器要重新生成 ----
+Simulated Video Transmission/MDK-ARM/DebugConfig/
+
+# ---- Keil 界面布局缓存，文件名带本机用户名 ----
+*.uvguix.*
+
+# ---- 编译中间产物，兜底用 ----
+*.o
+*.d
+*.crf
+*.axf
+*.elf
+*.map
+*.lnp
+*.dep
+*.build_log.htm
+
+# ---- Python 调试脚本的缓存 ----
+__pycache__/
+*.pyc
+
+# ---- 本地临时文件 ----
+*.log
+*.tmp
+.*.swp
